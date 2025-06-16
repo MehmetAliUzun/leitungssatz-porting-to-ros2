@@ -1,0 +1,13 @@
+build/
+.vscode/
+data/*
+
+yolo*
+runs/
+*.pt
+*.png
+*.bmp
+*.mp4
+
+__pycache__/
+.codegpt
