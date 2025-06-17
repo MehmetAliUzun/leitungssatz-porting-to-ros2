@@ -8,10 +8,15 @@ Understanding and analyzing the original ROS1 codebase
 Modeling the robot work environment in simulation
 Rewriting system nodes in ROS2 using modern conventions
 Testing the migrated system both in simulation and on hardware
+
 🛠️ Workspace Structure
 This repository is a ROS2 workspace (bachThes_ws) with the following layout:
 
-bachThes_ws/ ├── src/ # ROS2 packages will go here ├── install/ # (generated) ROS2 install files ├── build/ # (generated) build files ├── log/ # (generated) logs
+bachThes_ws/ 
+├── src/ # ROS2 packages will go here 
+├── install/ # (generated) ROS2 install files 
+├── build/ # (generated) build files 
+├── log/ # (generated) logs
 
 Note: install/, build/, and log/ are ignored via .gitignore
 
