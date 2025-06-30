@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from leitungssatz/srv/CheckComponents.srv
+// generated code does not contain a copyright notice
+
+
+module leitungssatz {
+  module srv {
+    struct CheckComponents_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct CheckComponents_Response {
+      uint8 ram;
+
+      uint8 gpu;
+    };
+  };
+};

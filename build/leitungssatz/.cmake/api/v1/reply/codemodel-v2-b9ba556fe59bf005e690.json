@@ -1,0 +1,242 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-6e6ec607836e4caa054b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "leitungssatz__py",
+					"jsonFile" : "directory-leitungssatz__py-79e0f2f0832fced9a940.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/leitungssatz__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "leitungssatz",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_leitungssatz_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_leitungssatz_egg-96beee31aa85d6201ade.json",
+					"name" : "ament_cmake_python_build_leitungssatz_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_leitungssatz::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_leitungssatz-aef3af7ed1e625dabb34.json",
+					"name" : "ament_cmake_python_copy_leitungssatz",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leitungssatz::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leitungssatz-5f3abfec93ca8b4733e8.json",
+					"name" : "leitungssatz",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leitungssatz__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leitungssatz__cpp-412278d10cf6b8a03fe2.json",
+					"name" : "leitungssatz__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "leitungssatz__py::@be8a7e6efeaf246a8008",
+					"jsonFile" : "target-leitungssatz__py-b85cfe0ea06974a44ae6.json",
+					"name" : "leitungssatz__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leitungssatz__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leitungssatz__rosidl_generator_c-2b35a44327bd36b190e5.json",
+					"name" : "leitungssatz__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leitungssatz__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leitungssatz__rosidl_generator_py-182c1bd57b2a66315101.json",
+					"name" : "leitungssatz__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leitungssatz__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leitungssatz__rosidl_typesupport_c-78d31ed79f7789232923.json",
+					"name" : "leitungssatz__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leitungssatz__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leitungssatz__rosidl_typesupport_c__pyext-1b8bd69712c46093e856.json",
+					"name" : "leitungssatz__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leitungssatz__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leitungssatz__rosidl_typesupport_cpp-b4a280e258c0b6ed90d0.json",
+					"name" : "leitungssatz__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leitungssatz__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leitungssatz__rosidl_typesupport_fastrtps_c-0e76faf8cd235278ebbf.json",
+					"name" : "leitungssatz__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leitungssatz__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leitungssatz__rosidl_typesupport_fastrtps_c__pyext-48f5190c7cdb38428491.json",
+					"name" : "leitungssatz__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leitungssatz__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leitungssatz__rosidl_typesupport_fastrtps_cpp-cf295e8fffd5378060e5.json",
+					"name" : "leitungssatz__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leitungssatz__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leitungssatz__rosidl_typesupport_introspection_c-9a321b85d3f67c0ecafe.json",
+					"name" : "leitungssatz__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leitungssatz__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leitungssatz__rosidl_typesupport_introspection_c__pyext-24854f728081d03c4b6a.json",
+					"name" : "leitungssatz__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leitungssatz__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leitungssatz__rosidl_typesupport_introspection_cpp-cdd508236ead419d4bcb.json",
+					"name" : "leitungssatz__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leitungssatz_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leitungssatz_uninstall-c0b7e622c94b5dc86f6b.json",
+					"name" : "leitungssatz_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_node-f686a4119f579aedc595.json",
+					"name" : "test_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-ab1e389f5f3d002e9da1.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz",
+		"source" : "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/leitungssatz"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

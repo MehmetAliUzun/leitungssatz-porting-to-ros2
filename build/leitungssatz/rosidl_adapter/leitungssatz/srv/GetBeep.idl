@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from leitungssatz/srv/GetBeep.srv
+// generated code does not contain a copyright notice
+
+
+module leitungssatz {
+  module srv {
+    @verbatim (language="comment", text=
+      "0 - off" "\n"
+      "1 - RAM Error" "\n"
+      "2 - GPU Error" "\n"
+      "3 - Working")
+    struct GetBeep_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct GetBeep_Response {
+      int8 beep;
+    };
+  };
+};

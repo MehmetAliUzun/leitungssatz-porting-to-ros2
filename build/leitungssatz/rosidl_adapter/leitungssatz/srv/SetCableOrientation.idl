@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from leitungssatz/srv/SetCableOrientation.srv
+// generated code does not contain a copyright notice
+
+
+module leitungssatz {
+  module srv {
+    @verbatim (language="comment", text=
+      "Service is handled by CableOrienter ROS 2" "\n"
+      "learning:       True = learning mode -> save point" "\n"
+      "                False = operating mode -> use saved point " "\n"
+      "cableNumber:    0 = calibration with blue cable # deprecated" "\n"
+      "                1 = black cable" "\n"
+      "                2 = lower blue " "\n"
+      "                3 = upper blue cable")
+    struct SetCableOrientation_Request {
+      boolean learning;
+
+      int8 cable_number;
+    };
+    struct SetCableOrientation_Response {
+      boolean success;
+    };
+  };
+};

@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from leitungssatz/srv/GrabBuchse.srv
+// generated code does not contain a copyright notice
+
+
+module leitungssatz {
+  module srv {
+    @verbatim (language="comment", text=
+      "Service to grab the Buchse from the table ")
+    struct GrabBuchse_Request {
+      boolean start;
+    };
+    struct GrabBuchse_Response {
+      boolean success;
+    };
+  };
+};

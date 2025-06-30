@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from leitungssatz/srv/AddTf2.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/TransformStamped.idl"
+
+module leitungssatz {
+  module srv {
+    struct AddTf2_Request {
+      geometry_msgs::msg::TransformStamped pose;
+
+      boolean relative;
+    };
+    struct AddTf2_Response {
+      boolean success;
+    };
+  };
+};

@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from leitungssatz/msg/Resolution.msg
+// generated code does not contain a copyright notice
+
+
+module leitungssatz {
+  module msg {
+    struct Resolution {
+      uint32 width;
+
+      uint32 height;
+    };
+  };
+};

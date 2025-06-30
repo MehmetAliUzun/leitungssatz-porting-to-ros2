@@ -1,0 +1,4 @@
+source;share/leitungssatz/local_setup.bash
+source;share/leitungssatz/local_setup.dsv
+source;share/leitungssatz/local_setup.sh
+source;share/leitungssatz/local_setup.zsh

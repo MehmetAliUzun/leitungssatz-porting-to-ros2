@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from leitungssatz/srv/GetFinished.srv
+// generated code does not contain a copyright notice
+
+
+module leitungssatz {
+  module srv {
+    struct GetFinished_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct GetFinished_Response {
+      boolean success;
+    };
+  };
+};

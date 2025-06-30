@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "leitungssatz__py",
+		"source" : "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/leitungssatz__py"
+	}
+}

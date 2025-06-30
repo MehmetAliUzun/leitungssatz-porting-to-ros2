@@ -1,0 +1,3 @@
+# Set the exposure time
+# time = time in ms
+int8 time

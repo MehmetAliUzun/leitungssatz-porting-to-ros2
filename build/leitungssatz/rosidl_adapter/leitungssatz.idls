@@ -1,0 +1,13 @@
+/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/rosidl_adapter/leitungssatz:msg/Resolution.idl
+/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/rosidl_adapter/leitungssatz:msg/VectorResolution.idl
+/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/rosidl_adapter/leitungssatz:srv/AddTf2.idl
+/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/rosidl_adapter/leitungssatz:srv/CheckComponents.idl
+/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/rosidl_adapter/leitungssatz:srv/GetBeep.idl
+/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/rosidl_adapter/leitungssatz:srv/GetBoardLocation.idl
+/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/rosidl_adapter/leitungssatz:srv/GetFinished.idl
+/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/rosidl_adapter/leitungssatz:srv/GetRedBlock.idl
+/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/rosidl_adapter/leitungssatz:srv/GetTriangles.idl
+/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/rosidl_adapter/leitungssatz:srv/GrabBuchse.idl
+/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/rosidl_adapter/leitungssatz:srv/SelectCam.idl
+/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/rosidl_adapter/leitungssatz:srv/SetCableOrientation.idl
+/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/rosidl_adapter/leitungssatz:srv/SetExposure.idl

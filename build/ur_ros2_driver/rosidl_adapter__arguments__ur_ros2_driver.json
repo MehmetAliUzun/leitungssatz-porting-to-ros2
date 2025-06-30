@@ -1,0 +1,26 @@
+{
+  "package_name": "ur_ros2_driver",
+  "non_idl_tuples": [
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/ur_ros2_driver:msg/GripperInfo.msg",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/ur_ros2_driver:msg/DashboardInfo.msg",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/ur_ros2_driver:msg/JogControl.msg",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/ur_ros2_driver:msg/PathEntry.msg",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/ur_ros2_driver:srv/SetGripper.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/ur_ros2_driver:srv/SetCartTarget.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/ur_ros2_driver:srv/SetJointTarget.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/ur_ros2_driver:srv/SetTrajectory.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/ur_ros2_driver:srv/SetSpeedSlider.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/ur_ros2_driver:srv/SetClipGun.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/ur_ros2_driver:srv/SetRelCartTarget.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/ur_ros2_driver:srv/StopMotion.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/ur_ros2_driver:srv/StartJog.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/ur_ros2_driver:srv/GetGripperCalib.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/ur_ros2_driver:srv/GetTimeStamp.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/ur_ros2_driver:srv/Log.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/ur_ros2_driver:srv/Power.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/ur_ros2_driver:srv/SetPayload.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/ur_ros2_driver:srv/SetContactTarget.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/ur_ros2_driver:srv/SetForceTarget.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/ur_ros2_driver:srv/SetFreedrive.srv"
+  ]
+}

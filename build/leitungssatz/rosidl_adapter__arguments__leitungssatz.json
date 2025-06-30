@@ -1,0 +1,18 @@
+{
+  "package_name": "leitungssatz",
+  "non_idl_tuples": [
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/leitungssatz:msg/Resolution.msg",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/leitungssatz:msg/VectorResolution.msg",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/leitungssatz:srv/AddTf2.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/leitungssatz:srv/CheckComponents.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/leitungssatz:srv/GetBeep.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/leitungssatz:srv/GetBoardLocation.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/leitungssatz:srv/GetFinished.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/leitungssatz:srv/GetRedBlock.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/leitungssatz:srv/GetTriangles.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/leitungssatz:srv/GrabBuchse.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/leitungssatz:srv/SelectCam.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/leitungssatz:srv/SetCableOrientation.srv",
+    "/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/src/leitungssatz:srv/SetExposure.srv"
+  ]
+}

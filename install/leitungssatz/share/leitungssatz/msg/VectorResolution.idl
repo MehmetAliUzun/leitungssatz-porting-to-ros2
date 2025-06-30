@@ -1,0 +1,13 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from leitungssatz/msg/VectorResolution.msg
+// generated code does not contain a copyright notice
+
+#include "leitungssatz/msg/Resolution.idl"
+
+module leitungssatz {
+  module msg {
+    struct VectorResolution {
+      sequence<leitungssatz::msg::Resolution> data;
+    };
+  };
+};

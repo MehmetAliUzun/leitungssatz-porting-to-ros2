@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from leitungssatz/srv/SetExposure.srv
+// generated code does not contain a copyright notice
+
+
+module leitungssatz {
+  module srv {
+    @verbatim (language="comment", text=
+      "Set the exposure time" "\n"
+      "time = time in ms")
+    struct SetExposure_Request {
+      int8 time;
+    };
+    struct SetExposure_Response {
+      boolean success;
+    };
+  };
+};
