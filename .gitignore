@@ -7,3 +7,8 @@ __pycache__/
 *.swp
 compile_commands.json
 .vscode/
+src/leitungssatz/src/Robot*.cpp
+src/leitungssatz/include/leitungssatz/Robot*.hpp
+src/ur_ros2_driver/
+build/ur_ros2_driver/
+install/ur_ros2_driver/

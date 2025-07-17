@@ -5,27 +5,48 @@
 #include <stdexcept>
 
 #include <leitungssatz/Task.hpp>
-//#include "ur_ros_driver/srv/set_cart_target.hpp" 
-// Above line includes robot driver, probably will be changed to include ROS2 drivers.
+#include "leitungssatz_interfaces/srv/set_cart_target.hpp"
+// Updated to use custom ROS2 interfaces through bridge node
 
 namespace leitungssatz {
     class MoveTask : public Task {
-private:
-  const std::string _parent_name = "base";
-  std::string _point_name;
-  const double _vel = 0.5;
-  const double _acc = 0.5;
-  MoveType _movetype;
+        private:
+            
+            const std::string _parent_name = "base";
+            std::string _point_name;
+            const double _vel = 0.5;
+            const double _acc = 0.5;
+            MoveType _movetype;
 
-public:
-  MoveTask();
-  MoveTask(Robot_ptr robot);
-  MoveTask(Robot_ptr robot, std::string point_name);
-  MoveTask(Robot_ptr robot, std::string point_name, MoveType movetype);
+        public:
+            MoveTask();
 
-  bool init();
-  bool moveJ();
-  bool moveL();
+            MoveTask(Robot_ptr robot): 
+            Task(robot){
+                init();
+            };
+            
+            MoveTask(Robot_ptr robot, std::string point_name) : 
+            Task(robot), _point_name(point_name){
+                init();
+            };
+            
+            MoveTask(Robot_ptr robot, std::string point_name, MoveType movetype) : 
+            Task(robot), _point_name(point_name), _movetype(movetype){
+                init();
+            };
+            
+            MoveTask(Robot_ptr robot, std::string point_name, MoveType movetype, double vel, double acc) : 
+            Task(robot), _point_name(point_name), _movetype(movetype), _vel(vel), _acc(acc){
+                init();
+            };
+            
+            bool init(); 
+            bool moveJ(); 
+            bool moveL(); 
+            bool moveP();
+            bool moveC();
+            TaskStatus execute() override;
 };
 
 }  // namespace leitungssatz

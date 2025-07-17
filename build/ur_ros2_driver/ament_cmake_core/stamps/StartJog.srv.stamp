@@ -1,6 +1,0 @@
-# Input
-# 0 - end jog
-# 1 - start jog
-bool io
----
-bool success

@@ -2,38 +2,66 @@
 
 using namespace leitungssatz;
 
-MoveTask::MoveTask() {}
-
-MoveTask::MoveTask(Robot_ptr robot) : Task(robot) {
-  init();
-}
-
-MoveTask::MoveTask(Robot_ptr robot, std::string point_name)
-  : Task(robot), _point_name(point_name) {
-  init();
-}
-
-MoveTask::MoveTask(Robot_ptr robot, std::string point_name, MoveType movetype)
-  : Task(robot), _point_name(point_name), _movetype(movetype) {
-  init();
-}
-
 bool MoveTask::init() {
   bool isPointPublished = _robot->isTransformExist(_parent_name, _point_name);
   if (!isPointPublished) {
     throw std::runtime_error("Point " + _parent_name + " -> " + _point_name + " doesn't exist!");
   }
-  return true;
+  return true;//Original code doesn't return anything, but the function signature suggests it should return a boolean.
 }
 
 bool MoveTask::moveJ() {
-  ur_ros_driver::srv::SetCartTarget srv = _robot->createCartTarget(
+  leitungssatz_interfaces::srv::SetCartTarget::Request::SharedPtr srv = _robot->createCartTarget(
     _parent_name, _point_name, _vel, _acc, 0);
   return _robot->call_cart_target(srv);
 }
 
 bool MoveTask::moveL() {
-  ur_ros_driver::srv::SetCartTarget srv = _robot->createCartTarget(
+  leitungssatz_interfaces::srv::SetCartTarget::Request::SharedPtr srv = _robot->createCartTarget(
     _parent_name, _point_name, _vel, _acc, 1);
   return _robot->call_cart_target(srv);
+}
+
+bool MoveTask::moveP() {
+  leitungssatz_interfaces::srv::SetCartTarget::Request::SharedPtr srv = _robot->createCartTarget(
+    _parent_name, _point_name, _vel, _acc, 2);
+  return _robot->call_cart_target(srv);
+}
+//The f.definitions above are adjusted to make compatible with robot class.
+//Adjust also the moveC() and take notes about the changes
+//because this changes may alter the original function signature
+
+//The ros1 version of this function was returning a service object
+//Now it is returning a service request object. Take extensive care when using
+
+bool MoveTask::moveC() {
+  leitungssatz_interfaces::srv::SetCartTarget::Request::SharedPtr srv = _robot->createCartTarget(
+    _parent_name, _point_name, _vel, _acc, 3);
+  return _robot->call_cart_target(srv);
+}
+
+TaskStatus MoveTask::execute()
+{
+    RCLCPP_INFO(rclcpp::get_logger("move_task"), "Executing MoveTask");
+    _task_status = TaskStatus::RUNNING;
+    bool ret = false;
+    switch(_movetype){
+        case MOVEJ:
+            ret = moveJ();
+            break;
+        case MOVEL:
+            ret = moveL();
+            break;
+        case MOVEP:
+            ret = moveP();
+            break;
+        case MOVEC:
+            ret = moveC();
+            break;
+    }
+    if(ret)
+        _task_status = TaskStatus::FINISHED;
+    else
+        _task_status = TaskStatus::FAILED;
+    return _task_status;
 }

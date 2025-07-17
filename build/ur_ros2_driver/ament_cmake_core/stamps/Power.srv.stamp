@@ -1,6 +1,0 @@
-# Input
-# 0 - powerOff
-# 1 - powerOn
-bool io
----
-bool success

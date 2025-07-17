@@ -15,7 +15,10 @@
 /home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/CMakeFiles/leitungssatz__rosidl_typesupport_fastrtps_c__pyext.dir
 /home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/CMakeFiles/leitungssatz__rosidl_typesupport_introspection_c__pyext.dir
 /home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/CMakeFiles/leitungssatz__rosidl_typesupport_c__pyext.dir
+/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/CMakeFiles/leitungssatz_lib.dir
 /home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/CMakeFiles/test_node.dir
+/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/CMakeFiles/test_gripper.dir
+/home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/CMakeFiles/test_wrench.dir
 /home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/CMakeFiles/test.dir
 /home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/CMakeFiles/edit_cache.dir
 /home/bt/Desktop/leitunssatz-ROS2-conversion/ls_ros2_ws/build/leitungssatz/CMakeFiles/rebuild_cache.dir

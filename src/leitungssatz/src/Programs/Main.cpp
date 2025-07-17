@@ -10,7 +10,7 @@
 #include "leitungssatz/Tasks/ForceTask.hpp"
 #include "leitungssatz/Tasks/InterTask.hpp"
 #include "leitungssatz/Tasks/SpiralTask.hpp"
-#include "leitungssatz/Tasks/GrabBuchseTask.hpp"
+//#include "leitungssatz/Tasks/GrabBuchseTask.hpp"
 #include "leitungssatz/Tasks/SetCableOrientationTask.hpp"
 #include "leitungssatz/Tasks/WirePushTask.hpp"
 #include "leitungssatz/Tasks/CableCheckTask.hpp"
@@ -25,7 +25,7 @@
 bool isForceExceeded(const leitungssatz::Wrench_ptr& wrench, double force_limit) {
     return std::abs(wrench->wrenchMsg.wrench.force.x) > force_limit ||
            std::abs(wrench->wrenchMsg.wrench.force.y) > force_limit ||
-           std::abs(wrench->wrenchMsg.wrench.force.z) > force_limit 
+           std::abs(wrench->wrenchMsg.wrench.force.z) > force_limit ;
 }
 
 int main(int argc, char **argv) {
@@ -41,7 +41,7 @@ int main(int argc, char **argv) {
     auto rob = std::make_shared<leitungssatz::Robot>(node, grip);
     auto wrench = std::make_shared<leitungssatz::Wrench>(node);
 
-    rclcpp::sleep_for(std::chrono::miliseconds(500); 
+    rclcpp::sleep_for(std::chrono::milliseconds(500)); 
     
     //Gripper tasks
     auto grip_task_open_cable = std::make_shared<leitungssatz::GripperTask>(rob, 45, true);  // open gripper
@@ -79,10 +79,10 @@ int main(int argc, char **argv) {
     auto cablePostPick2 = std::make_shared<leitungssatz::MoveTask>(rob, "PostPickYellowTerminal2", leitungssatz::MOVEL, VEL, ACC); 
 
     auto cableCheckOrientationTerminal2 = std::make_shared<leitungssatz::MoveTask>(rob, "CheckOrientationPoint", leitungssatz::MOVEL, VEL, ACC);
-    auto SetcableOrientation2 = std::make_shared<leitungssatz::SetCableOrientationTask>(rob, n, leitungssatz::CableType::YELLOWT1, "/CableOrienter2/SetCableOrientation");
-    auto spiralmove_yellow2 = std::make_shared<leitungssatz::SpiralTask>(rob,n, wrench, 0.1,2.0,45,20,0.253,2,true); //default x-force = 1.8 and xlimit = 0.253 
+    auto SetcableOrientation2 = std::make_shared<leitungssatz::SetCableOrientationTask>(rob, node, leitungssatz::CableType::YELLOWT1, "/CableOrienter2/SetCableOrientation");
+    auto spiralmove_yellow2 = std::make_shared<leitungssatz::SpiralTask>(rob, node, wrench, 0.1,2.0,45,20,0.253,2,true); //default x-force = 1.8 and xlimit = 0.253 
 
-    auto insertionYellowT2 = std::make_shared<leitungssatz::WirePush>(rob,wrench,n,"yellowT1_push_close","yellowT1_push_far",3,10,10);
+    auto insertionYellowT2 = std::make_shared<leitungssatz::WirePush>(rob,wrench, node,"yellowT1_push_close","yellowT1_push_far",3,10,10);
     auto PostInsertionPoint21 = std::make_shared<leitungssatz::MoveTask>(rob, "PostInsertionPoint", leitungssatz::MOVEL, VEL, ACC);
     auto PostInsertionPoint2 = std::make_shared<leitungssatz::MoveTask>(rob, "FINISH_POINT_YELLOWT1", leitungssatz::MOVEL, VEL, ACC);
 
@@ -94,10 +94,10 @@ int main(int argc, char **argv) {
     auto cable2PostPick = std::make_shared<leitungssatz::MoveTask>(rob, "PostPickYellow2Terminal1", leitungssatz::MOVEL, VEL, ACC); 
 
     auto cable2CheckOrientationTerminal1 = std::make_shared<leitungssatz::MoveTask>(rob, "CheckOrientationPoint", leitungssatz::MOVEL, VEL, ACC);
-    auto Setcable2Orientation = std::make_shared<leitungssatz::SetCableOrientationTask>(rob, n, leitungssatz::CableType::YELLOW2T2, "/CableOrienter2/SetCableOrientation");
+    auto Setcable2Orientation = std::make_shared<leitungssatz::SetCableOrientationTask>(rob, node, leitungssatz::CableType::YELLOW2T2, "/CableOrienter2/SetCableOrientation");
     auto spiralmove2_yellow = std::make_shared<leitungssatz::SpiralTask>(rob, node, wrench, 0.1,2.0,45,20,0.253,2,true); //default x-force = 1.8 and xlimit = 0.253 
 
-    auto insertionYellow2T2 = std::make_shared<leitungssatz::WirePush>(rob,wrench,n,"yellow2T2_push_close","yellow2T2_push_far",2,10,10);
+    auto insertionYellow2T2 = std::make_shared<leitungssatz::WirePush>(rob,wrench, node,"yellow2T2_push_close","yellow2T2_push_far",2,10,10);
 
     auto PostInsertionPoint3 = std::make_shared<leitungssatz::MoveTask>(rob, "APPROACH_POINT2_YELLOW2_T2", leitungssatz::MOVEL, VEL, ACC);
 
@@ -111,9 +111,9 @@ int main(int argc, char **argv) {
 
     auto cable2CheckOrientationTerminal2 = std::make_shared<leitungssatz::MoveTask>(rob, "CheckOrientationPoint", leitungssatz::MOVEL, VEL, ACC);
     auto Setcable2Orientation2 = std::make_shared<leitungssatz::SetCableOrientationTask>(rob, node , leitungssatz::CableType::YELLOW2T1, "/CableOrienter2/SetCableOrientation");
-    auto spiralmove2_yellow2 = std::make_shared<leitungssatz::SpiralTask>(rob,n, wrench, 0.1,2.0,45,20,0.253,2,true); //default x-force = 1.8 and xlimit = 0.253 
+    auto spiralmove2_yellow2 = std::make_shared<leitungssatz::SpiralTask>(rob, node, wrench, 0.1,2.0,45,20,0.253,2,true); //default x-force = 1.8 and xlimit = 0.253 
 
-    auto insertionYellow2T1 = std::make_shared<leitungssatz::WirePush>(rob,wrench,n,"yellow2T1_push_close","yellow2T1_push_far",3,10,10);
+    auto insertionYellow2T1 = std::make_shared<leitungssatz::WirePush>(rob,wrench,node,"yellow2T1_push_close","yellow2T1_push_far",3,10,10);
 
     auto PostInsertionPoint4 = std::make_shared<leitungssatz::MoveTask>(rob, "APPROACH_POINT2_YELLOW2_T1", leitungssatz::MOVEL, VEL, ACC);
 
@@ -213,51 +213,51 @@ int main(int argc, char **argv) {
 
     // Conector 4 pick up and insert task
 
-    auto connector4_pick_up_and_insert = srd::make_shared<leitungssatz::InterTask>();
+    auto connector4_pick_up_and_insert = std::make_shared<leitungssatz::InterTask>();
 
-    auto connector4PrePickup = srd::make_shared<leitungssatz::MoveTask>(rob, "connector4PrePickup", leitungssatz::MOVEL, VEL, ACC);
-    auto connector4PullOut = srd::make_shared<leitungssatz::MoveTask>(rob, "connector4PullOut", leitungssatz::MOVEL, VEL, ACC);
-    auto connector4PreClose = srd::make_shared<leitungssatz::MoveTask>(rob, "connector4PreClose", leitungssatz::MOVEL, VEL, ACC);
-    auto connector4PreClose2 = srd::make_shared<leitungssatz::MoveTask>(rob, "connector4PreClose2", leitungssatz::MOVEL, VEL, ACC);
-    auto connector4PreClose3 = srd::make_shared<leitungssatz::MoveTask>(rob, "connector4PreClose3", leitungssatz::MOVEL, VEL, ACC);
-    auto connector4PreClose4 = srd::make_shared<leitungssatz::MoveTask>(rob, "connector4PreClose4", leitungssatz::MOVEL, VEL, ACC);
-    auto connector4PreClose5 = srd::make_shared<leitungssatz::MoveTask>(rob, "connector4PreClose5", leitungssatz::MOVEL, VEL, ACC);
-    auto connector4PreClose6 = srd::make_shared<leitungssatz::MoveTask>(rob, "connector4PreClose6", leitungssatz::MOVEL, VEL, ACC);
-    auto connector4PreClose7 = srd::make_shared<leitungssatz::MoveTask>(rob, "connector4PreClose7", leitungssatz::MOVEL, VEL, ACC);
-    auto connector4Close = srd::make_shared<leitungssatz::MoveTask>(rob, "connector4Close", leitungssatz::MOVEL, VEL, ACC);
-    auto connector4HalfOut = srd::make_shared<leitungssatz::MoveTask>(rob, "connector4HalfOut", leitungssatz::MOVEL, VEL, ACC);
-    auto connector4Out = srd::make_shared<leitungssatz::MoveTask>(rob, "connector4Out", leitungssatz::MOVEL, VEL, ACC);
-    auto connector4PreInsert = srd::make_shared<leitungssatz::MoveTask>(rob, "connector4PreInsert", leitungssatz::MOVEL, VEL, ACC);
-    auto connector4PreInsert1 = srd::make_shared<leitungssatz::MoveTask>(rob, "connector4PreInsert1", leitungssatz::MOVEL, VEL, ACC);
-    auto connector4InitialInsert = srd::make_shared<leitungssatz::MoveTask>(rob, "connector4InitialInsert", leitungssatz::MOVEL, VEL, ACC);
-    auto connector4PrePush = srd::make_shared<leitungssatz::MoveTask>(rob, "connector4PrePush", leitungssatz::MOVEL, VEL, ACC);
-    auto connector4Push = srd::make_shared<leitungssatz::MoveTask>(rob, "connector4Push", leitungssatz::MOVEL, VEL, ACC);
-    auto connector4Done = srd::make_shared<leitungssatz::MoveTask>(rob, "connector4Done", leitungssatz::MOVEL, VEL, ACC);
+    auto connector4PrePickup = std::make_shared<leitungssatz::MoveTask>(rob, "connector4PrePickup", leitungssatz::MOVEL, VEL, ACC);
+    auto connector4PullOut = std::make_shared<leitungssatz::MoveTask>(rob, "connector4PullOut", leitungssatz::MOVEL, VEL, ACC);
+    auto connector4PreClose = std::make_shared<leitungssatz::MoveTask>(rob, "connector4PreClose", leitungssatz::MOVEL, VEL, ACC);
+    auto connector4PreClose2 = std::make_shared<leitungssatz::MoveTask>(rob, "connector4PreClose2", leitungssatz::MOVEL, VEL, ACC);
+    auto connector4PreClose3 = std::make_shared<leitungssatz::MoveTask>(rob, "connector4PreClose3", leitungssatz::MOVEL, VEL, ACC);
+    auto connector4PreClose4 = std::make_shared<leitungssatz::MoveTask>(rob, "connector4PreClose4", leitungssatz::MOVEL, VEL, ACC);
+    auto connector4PreClose5 = std::make_shared<leitungssatz::MoveTask>(rob, "connector4PreClose5", leitungssatz::MOVEL, VEL, ACC);
+    auto connector4PreClose6 = std::make_shared<leitungssatz::MoveTask>(rob, "connector4PreClose6", leitungssatz::MOVEL, VEL, ACC);
+    auto connector4PreClose7 = std::make_shared<leitungssatz::MoveTask>(rob, "connector4PreClose7", leitungssatz::MOVEL, VEL, ACC);
+    auto connector4Close = std::make_shared<leitungssatz::MoveTask>(rob, "connector4Close", leitungssatz::MOVEL, VEL, ACC);
+    auto connector4HalfOut = std::make_shared<leitungssatz::MoveTask>(rob, "connector4HalfOut", leitungssatz::MOVEL, VEL, ACC);
+    auto connector4Out = std::make_shared<leitungssatz::MoveTask>(rob, "connector4Out", leitungssatz::MOVEL, VEL, ACC);
+    auto connector4PreInsert = std::make_shared<leitungssatz::MoveTask>(rob, "connector4PreInsert", leitungssatz::MOVEL, VEL, ACC);
+    auto connector4PreInsert1 = std::make_shared<leitungssatz::MoveTask>(rob, "connector4PreInsert1", leitungssatz::MOVEL, VEL, ACC);
+    auto connector4InitialInsert = std::make_shared<leitungssatz::MoveTask>(rob, "connector4InitialInsert", leitungssatz::MOVEL, VEL, ACC);
+    auto connector4PrePush = std::make_shared<leitungssatz::MoveTask>(rob, "connector4PrePush", leitungssatz::MOVEL, VEL, ACC);
+    auto connector4Push = std::make_shared<leitungssatz::MoveTask>(rob, "connector4Push", leitungssatz::MOVEL, VEL, ACC);
+    auto connector4Done = std::make_shared<leitungssatz::MoveTask>(rob, "connector4Done", leitungssatz::MOVEL, VEL, ACC);
 
     // Conector 4 pick up and insert task
-    auto connector2_to_tool_change = srd::make_shared<leitungssatz::InterTask>();
+    auto connector2_to_tool_change = std::make_shared<leitungssatz::InterTask>();
 
-    auto preToolChange1 = srd::make_shared<leitungssatz::MoveTask>(rob, "preToolChange1", leitungssatz::MOVEL, VEL, ACC);
-    auto preToolChange2 = srd::make_shared<leitungssatz::MoveTask>(rob, "preToolChange2", leitungssatz::MOVEL, VEL, ACC);
+    auto preToolChange1 = std::make_shared<leitungssatz::MoveTask>(rob, "preToolChange1", leitungssatz::MOVEL, VEL, ACC);
+    auto preToolChange2 = std::make_shared<leitungssatz::MoveTask>(rob, "preToolChange2", leitungssatz::MOVEL, VEL, ACC);
 
 
 
     // Tool change task
-    auto tool_change = srd::make_shared<leitungssatz::InterTask>();
+    auto tool_change = std::make_shared<leitungssatz::InterTask>();
 
-    auto aproachChangeGripper = srd::make_shared<leitungssatz::MoveTask>(rob, "aproachChangeGripper", leitungssatz::MOVEL, VEL, ACC);
-    auto aproachChangeGripper1 = srd::make_shared<leitungssatz::MoveTask>(rob, "aproachChangeGripper1", leitungssatz::MOVEL, VEL, ACC);
-    auto preChangeGripper = srd::make_shared<leitungssatz::MoveTask>(rob, "preChangeGripper", leitungssatz::MOVEL, VEL, ACC);
-    auto preChangeGripper1 = srd::make_shared<leitungssatz::MoveTask>(rob, "preChangeGripper1", leitungssatz::MOVEL, VEL, ACC);
-    auto changeGripperUp = srd::make_shared<leitungssatz::MoveTask>(rob, "changeGripperUp", leitungssatz::MOVEL, VEL, ACC);
-    auto changeGripperDown = srd::make_shared<leitungssatz::MoveTask>(rob, "changeGripperDown", leitungssatz::MOVEL, VEL, ACC);
-    auto changeGripperHalfOut = srd::make_shared<leitungssatz::MoveTask>(rob, "changeGripperHalfOut", leitungssatz::MOVEL, VEL, ACC);
-    auto changeGrippeyellow2T2_push_farrOut = srd::make_shared<leitungssatz::MoveTask>(rob, "changeGripperOut", leitungssatz::MOVEL, VEL, ACC);
-    auto noGripperUp = srd::make_shared<leitungssatz::MoveTask>(rob, "noGripperUp", leitungssatz::MOVEL, VEL, ACC);
-    auto noGripperUp2 = srd::make_shared<leitungssatz::MoveTask>(rob, "noGripperUp2", leitungssatz::MOVEL, VEL, ACC);
-    auto noGripperDown = srd::make_shared<leitungssatz::MoveTask>(rob, "noGripperDown", leitungssatz::MOVEL, VEL, ACC);
-    auto clipGunHalfIn = srd::make_shared<leitungssatz::MoveTask>(rob, "clipGunHalfIn", leitungssatz::MOVEL, VEL, ACC);
-    auto clipGunIn = srd::make_shared<leitungssatz::MoveTask>(rob, "clipGunIn", leitungssatz::MOVEL, VEL, ACC);
+    auto aproachChangeGripper = std::make_shared<leitungssatz::MoveTask>(rob, "aproachChangeGripper", leitungssatz::MOVEL, VEL, ACC);
+    auto aproachChangeGripper1 = std::make_shared<leitungssatz::MoveTask>(rob, "aproachChangeGripper1", leitungssatz::MOVEL, VEL, ACC);
+    auto preChangeGripper = std::make_shared<leitungssatz::MoveTask>(rob, "preChangeGripper", leitungssatz::MOVEL, VEL, ACC);
+    auto preChangeGripper1 = std::make_shared<leitungssatz::MoveTask>(rob, "preChangeGripper1", leitungssatz::MOVEL, VEL, ACC);
+    auto changeGripperUp = std::make_shared<leitungssatz::MoveTask>(rob, "changeGripperUp", leitungssatz::MOVEL, VEL, ACC);
+    auto changeGripperDown = std::make_shared<leitungssatz::MoveTask>(rob, "changeGripperDown", leitungssatz::MOVEL, VEL, ACC);
+    auto changeGripperHalfOut = std::make_shared<leitungssatz::MoveTask>(rob, "changeGripperHalfOut", leitungssatz::MOVEL, VEL, ACC);
+    auto changeGrippeyellow2T2_push_farrOut = std::make_shared<leitungssatz::MoveTask>(rob, "changeGripperOut", leitungssatz::MOVEL, VEL, ACC);
+    auto noGripperUp = std::make_shared<leitungssatz::MoveTask>(rob, "noGripperUp", leitungssatz::MOVEL, VEL, ACC);
+    auto noGripperUp2 = std::make_shared<leitungssatz::MoveTask>(rob, "noGripperUp2", leitungssatz::MOVEL, VEL, ACC);
+    auto noGripperDown = std::make_shared<leitungssatz::MoveTask>(rob, "noGripperDown", leitungssatz::MOVEL, VEL, ACC);
+    auto clipGunHalfIn = std::make_shared<leitungssatz::MoveTask>(rob, "clipGunHalfIn", leitungssatz::MOVEL, VEL, ACC);
+    auto clipGunIn = std::make_shared<leitungssatz::MoveTask>(rob, "clipGunIn", leitungssatz::MOVEL, VEL, ACC);
 
     
     
@@ -317,7 +317,7 @@ int main(int argc, char **argv) {
     cable_yellow2 ->queue(PostInsertionPoint4);
 
 
-    ROS_INFO("Wrench Force in Y %f",wrench->wrenchMsg.wrench.force.y);
+    RCLCPP_INFO(node->get_logger(), "Wrench Force in Y %f", wrench->wrenchMsg.wrench.force.y);
 
     //First Black Cable
 
@@ -574,8 +574,7 @@ int main(int argc, char **argv) {
     tool_change->queue(tool_change_task);
 
     
-    auto sched1 = std::make_shared<leitungssatz::TaskScheduler>(); 
-    sched1.addTask(move_home);
+    leitungssatz::TaskScheduler sched1;
     sched1.addTask(cable_yellow);
     sched1.addTask(cable_yellow2);
     sched1.addTask(connector1_pick_up_and_insert);

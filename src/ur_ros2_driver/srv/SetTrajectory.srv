@@ -1,7 +1,0 @@
-# Trajectory
-ur_ros_driver/PathEntry[] path
-
-# A bool specifying if the move command should be asynchronous.
-bool asynchronous
----
-bool success
